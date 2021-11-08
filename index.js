@@ -84,10 +84,19 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(inningCb, number){
+  let Home = 0;
+  let Away = 0;
+  for (let i = 0; i < number; i++){
+    Home = Home + inningCb();
+    Away = Away + inningCb();
+  }
+  return {
+    Home,
+    Away
+  }
 }
-
+console.log(getInningScore(inning, 9));
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
